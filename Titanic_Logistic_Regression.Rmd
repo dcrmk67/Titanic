@@ -1,0 +1,34 @@
+---
+title: "Explaining Logistic Regression Models in R Using Titanic Data"
+output: html_notebook
+---
+
+***
+
+
+## Introduction
+
+The purpose of this notebook is build and explain logistic regression models in R using the Titanic data set <https://www.kaggle.com/c/titanic> from Kaggle.com. The data, which will be explained in more detail to follow, is a standard data set used as a introduction to learning machine learning. For most projects, the goal is to develop models that predicts if a particular passenger survived or perished in infamous collision of the Titanic on its maiden voyage. 
+
+This projects will go through the typical steps of a data science project used in such predictions. However, instead of focusing on finding a statistical model that maximizes the accuracy of model predictions, this project will focus on describing the model results. In real-life situations, this is probably the most important step for a data scientist in which to engage, but it is seldom absent from many of the notebooks posted by Kaggle users.
+
+
+***
+
+## First Step
+
+For most projects, data scientist will have creates an R script (or many scripts) exploring the data prior to building an R notebook. In my experience in learning data science in R, I tend to discover R packages along the way an add them into my projects. For this project, I have settled on the projects below and added them at the beginning of my notebook project. **NOTE: The following libraries will be installed to the computer if they are not already available!**
+
+```{r libraries, warning=FALSE, message=FALSE, echo=TRUE}
+#################################################################
+# Assign project libraries
+#################################################################
+
+if (!require('tidyverse'))  install.packages('tidyverse')
+if (!require('visdat'))     install.packages('visdat')
+if (!require('inspectdf'))  install.packages('inspectdf')
+if (!require('dlookr'))     install.packages('dlookr')
+if (!require('caret'))      install.packages('caret')
+if (!require('glmnet'))     install.packages('glmnet')
+if (!require('PerformanceAnalytics')) install.packages('PerformanceAnalytics')
+```
